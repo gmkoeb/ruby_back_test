@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RubyBackTest</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Escolha seu destino!</h1>
+    
+    <%= form_tag cities_path, method: :get, class: "search-form" do %>
+      <%= label_tag :state, "State:" %>
+      <%= select_tag :state, options_for_select(State.pluck(:name).uniq, params[:state]), prompt: "Selecione um estado", required: true %>
+
+      <%= label_tag :name_part, "Parte do nome de uma cidade:" %>
+      <%= text_field_tag :name_part, params[:name_part] %>
+
+      <%= submit_tag "Procurar" %>
+    <% end %>
+  </body>
+</html>
