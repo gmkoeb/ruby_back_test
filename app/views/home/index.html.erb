@@ -10,7 +10,7 @@
     <h1>Escolha seu destino!</h1>
     
     <%= form_tag cities_path, method: :get, class: "search-form" do %>
-      <%= label_tag :state, "State:" %>
+      <%= label_tag :state, "Estados:" %>
       <%= select_tag :state, options_for_select(State.pluck(:name).uniq, params[:state]), prompt: "Selecione um estado", required: true %>
 
       <%= label_tag :name_part, "Parte do nome de uma cidade:" %>
