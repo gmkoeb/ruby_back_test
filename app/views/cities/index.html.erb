@@ -4,13 +4,18 @@
     <title></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <% @cities.each do |city| %>
-      <ul>
-        <li><%=city.name%></li>
-      </ul>
-    <% end %> 
+    <div class="cities-box">
+      <% if @cities == [] %>
+        <li>Não foi possível encontrar nenhuma cidade com essas especificações.</li>
+      <% else %>
+        <% @cities.each do |city| %>
+          <ul>
+            <li><%=city.name%></li>
+          </ul>
+        <% end %>  
+      <% end %>  
+    </div>
   </body>
 </html>

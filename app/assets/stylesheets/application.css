@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+  font-family: 'roboto';
+}
+
+body{
+  background-color: #121214;
+}

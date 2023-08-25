@@ -1,7 +1,10 @@
 #!/usr/bin/env ruby
-require 'fileutils'
-include FileUtils
+# frozen_string_literal: true
 
+require 'fileutils'
+class FileUtils
+  include FileUtils
+end
 # path to your application root.
 APP_ROOT = File.expand_path('..', __dir__)
 

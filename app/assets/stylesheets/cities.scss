@@ -1,3 +1,22 @@
 // Place all the styles related to the Cities controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 25vh;
+  font-size: 4rem;
+}
+
+.cities-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #202024;
+  width: fit-content;
+  height: fit-content;
+  padding: 5rem 10rem;
+  border-radius: 1rem;
+}
+
