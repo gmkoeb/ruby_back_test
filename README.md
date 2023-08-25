@@ -1,24 +1,35 @@
 # README
+RubyBackTest App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Before you start, make sure you have the following installed:
 
-Things you may want to cover:
+- Ruby 2.7.0
 
-* Ruby version
+- Rails 5.x
 
-* System dependencies
+- Docker and Docker Compose
 
-* Configuration
+- PostgreSQL
 
-* Database creation
+1 - Clone the Repository:
 
-* Database initialization
+https://github.com/gmkoeb/ruby_back_test.git
 
-* How to run the test suite
+2 - cd into ruby_back_test
 
-* Services (job queues, cache servers, search engines, etc.)
+3 - Build and Run the Docker Containers:
 
-* Deployment instructions
+docker-compose up --build
 
-* ...
+4 - Create and setup the database:
+    In the root directory type:
+    docker exec ruby_back_test-web-1 rails db:setup
+
+4.1 - Or, you can connect to the docker container with the command:
+        docker exec ruby_back_test-web-1 bash
+4.2 - then, inside the container run the command:
+        rails db:setup
+5. The web application will be up in localhost:3000
+
+6. To run the tests you can follow 4.1 instructions. Inside the docker container run the command:
+    bundle exec rspec
